@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC43328823FB1C7E0097DF01 /* RemoteFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43328723FB1C7E0097DF01 /* RemoteFeedItem.swift */; };
+		FC43328A23FB1CB70097DF01 /* LocalFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43328923FB1CB70097DF01 /* LocalFeedItem.swift */; };
 		FC55143623F726AC003CC79C /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC55143523F726AC003CC79C /* CacheFeedUseCaseTests.swift */; };
 		FC59B4C823E75E8800D8790A /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC59B4BE23E75E8800D8790A /* EssentialFeed.framework */; };
 		FC59B4DA23E75EBD00D8790A /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC59B4D923E75EBD00D8790A /* FeedItem.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		FC43328723FB1C7E0097DF01 /* RemoteFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedItem.swift; sourceTree = "<group>"; };
+		FC43328923FB1CB70097DF01 /* LocalFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedItem.swift; sourceTree = "<group>"; };
 		FC55143523F726AC003CC79C /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
 		FC59B4BE23E75E8800D8790A /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC59B4C223E75E8800D8790A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				FCF5658D23FAD8F00058C81F /* LocalFeedLoader.swift */,
 				FCF5658F23FAD93D0058C81F /* FeedStore.swift */,
+				FC43328923FB1CB70097DF01 /* LocalFeedItem.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				FCA820F023EB172B000441BC /* FeedItemMapper.swift in Sources */,
 				FC43328823FB1C7E0097DF01 /* RemoteFeedItem.swift in Sources */,
 				FC59B4E123E76B7D00D8790A /* RemoteFeedLoader.swift in Sources */,
+				FC43328A23FB1CB70097DF01 /* LocalFeedItem.swift in Sources */,
 				FCF5659023FAD93D0058C81F /* FeedStore.swift in Sources */,
 				FCF5658E23FAD8F00058C81F /* LocalFeedLoader.swift in Sources */,
 				FCA820EE23EB16D9000441BC /* HTTPClient.swift in Sources */,
