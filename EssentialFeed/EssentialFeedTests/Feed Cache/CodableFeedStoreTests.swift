@@ -12,7 +12,7 @@ import EssentialFeed
 
 class CodableFeedStore {
     func retrieve(completion: @escaping FeedStore.RetrievalCompletion) {
-        completion(.empty))
+        completion(.empty)
     }
 }
 
