@@ -40,7 +40,7 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
         trackForMemoryLeaks(client, file: file, line: line)
         trackForMemoryLeaks(loader, file: file, line: line)
         
-        let exp = expectation(description: "Wair for load completion")
+        let exp = expectation(description: "Wait for load completion")
         
         var receivedResult: LoadFeedResult?
         loader.load { result in
