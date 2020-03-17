@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class CodableFeedStore: FeedStore {
+public final class CodableFeedStore: FeedStore {
     private struct Cache: Codable {
         let feed: [CodableFeedImage]
         let timestamp: Date
@@ -32,7 +32,7 @@ public class CodableFeedStore: FeedStore {
         }
         
         var local: LocalFeedImage {
-            return LocalFeedImage(id: id, description: description, location: location, url: url )
+            return LocalFeedImage(id: id, description: description, location: location, url: url)
         }
     }
     
@@ -49,6 +49,7 @@ public class CodableFeedStore: FeedStore {
             guard let data = try? Data(contentsOf: storeURL) else {
                 return completion(.empty)
             }
+            
             do {
                 let decoder = JSONDecoder()
                 let cache = try decoder.decode(Cache.self, from: data)
@@ -80,6 +81,7 @@ public class CodableFeedStore: FeedStore {
             guard FileManager.default.fileExists(atPath: storeURL.path) else {
                 return completion(nil)
             }
+            
             do {
                 try FileManager.default.removeItem(at: storeURL)
                 completion(nil)
