@@ -62,5 +62,4 @@ public final class CoreDataFeedStore: FeedStore {
          let context = self.context
          context.perform { action(context) }
      }
-    
 }
