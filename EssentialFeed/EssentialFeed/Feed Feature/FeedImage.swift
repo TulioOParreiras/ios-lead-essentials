@@ -20,5 +20,4 @@ public struct FeedImage: Equatable {
         self.location = location
         self.url = url
     }
-    
 }

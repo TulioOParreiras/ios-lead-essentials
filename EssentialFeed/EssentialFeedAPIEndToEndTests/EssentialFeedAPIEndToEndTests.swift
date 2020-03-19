@@ -26,6 +26,7 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
             
         case let .failure(error)?:
             XCTFail("Expected successful feed result, got \(error) instead")
+            
         default:
             XCTFail("Expected successful feed result, got no result instead")
         }
@@ -47,6 +48,7 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
             receivedResult = result
             exp.fulfill()
         }
+        wait(for: [exp], timeout: 5.0)
         
         return receivedResult
     }
@@ -71,7 +73,7 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
             "F79BD7F8-063F-46E2-8147-A67635C3BB01"
         ][index])!
     }
-
+    
     private func description(at index: Int) -> String? {
         return [
             "Description 1",
@@ -84,7 +86,7 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
             "Description 8"
         ][index]
     }
-
+    
     private func location(at index: Int) -> String? {
         return [
             "Location 1",
@@ -97,9 +99,8 @@ class EssentialFeedAPIEndToEndTests: XCTestCase {
             "Location 8"
         ][index]
     }
-
+    
     private func imageURL(at index: Int) -> URL {
         return URL(string: "https://url-\(index+1).com")!
     }
-    
 }

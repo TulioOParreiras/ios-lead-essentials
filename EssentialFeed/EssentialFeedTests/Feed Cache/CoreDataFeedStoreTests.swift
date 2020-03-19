@@ -9,7 +9,7 @@
 import XCTest
 import EssentialFeed
 
-class CoreDataFeedStoreTests: XCTestCase, FeedStoreSpecs {
+class CoreDataFeedStoreTests: XCTestCase, FeedStoreSpecs  {
     
     func test_retrieve_deliversEmptyOnEmptyCache() {
         let sut = makeSUT()
@@ -82,7 +82,7 @@ class CoreDataFeedStoreTests: XCTestCase, FeedStoreSpecs {
         
         assertThatSideEffectsRunSerially(on: sut)
     }
-    
+
     // - MARK: Helpers
     
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> FeedStore {
@@ -92,5 +92,5 @@ class CoreDataFeedStoreTests: XCTestCase, FeedStoreSpecs {
         trackForMemoryLeaks(sut, file: file, line: line)
         return sut
     }
-    
+
 }
