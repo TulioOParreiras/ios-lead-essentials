@@ -400,6 +400,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		FC9AE97F2450A032008A3C9B /* Feed UI */ = {
+			isa = PBXGroup;
+			children = (
+				FC9AE97524509DF4008A3C9B /* Controllers */,
+				FC9AE97624509DFE008A3C9B /* Views */,
+			);
+			path = "Feed UI";
+			sourceTree = "<group>";
+		};
 		FCA820F123EB1B93000441BC /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,8 +440,7 @@
 			isa = PBXGroup;
 			children = (
 				FCE69A5824259410004A6AB5 /* Info.plist */,
-				FC9AE97524509DF4008A3C9B /* Controllers */,
-				FC9AE97624509DFE008A3C9B /* Views */,
+				FC9AE97F2450A032008A3C9B /* Feed UI */,
 			);
 			path = EssentialFeediOS;
 			sourceTree = "<group>";
