@@ -6,7 +6,10 @@
 //  Copyright © 2020 Tulio Parreiras. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import EssentialFeed
+import EssentialFeediOS
+
 
 extension FeedImageCell {
     
