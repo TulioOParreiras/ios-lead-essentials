@@ -6,7 +6,6 @@
 //  Copyright © 2020 Tulio Parreiras. All rights reserved.
 //
 
-import Foundation
 import EssentialFeed
 
 final class FeedViewModel {
