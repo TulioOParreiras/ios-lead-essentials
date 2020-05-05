@@ -70,6 +70,8 @@
 		FCDEBF9423F1AB32009D88B1 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC59B4BE23E75E8800D8790A /* EssentialFeed.framework */; };
 		FCDEBF9A23F1B1BD009D88B1 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDBF43F23EDAA9A005117E6 /* XCTestCase+MemoryLeakTracking.swift */; };
 		FCE69A5E24259410004A6AB5 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE69A5524259410004A6AB5 /* EssentialFeediOS.framework */; };
+		FCEFDDBC2461E1950066E68A /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCEFDDBB2461E1940066E68A /* Feed.storyboard */; };
+		FCEFDDBE2461E1D00066E68A /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCEFDDBD2461E1D00066E68A /* Feed.xcassets */; };
 		FCF5658E23FAD8F00058C81F /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF5658D23FAD8F00058C81F /* LocalFeedLoader.swift */; };
 		FCF5659023FAD93D0058C81F /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF5658F23FAD93D0058C81F /* FeedStore.swift */; };
 /* End PBXBuildFile section */
@@ -191,6 +193,8 @@
 		FCE69A5824259410004A6AB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCE69A5D24259410004A6AB5 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE69A6424259410004A6AB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCEFDDBB2461E1940066E68A /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		FCEFDDBD2461E1D00066E68A /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		FCF5658D23FAD8F00058C81F /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 		FCF5658F23FAD93D0058C81F /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -424,6 +428,8 @@
 			children = (
 				FCCEE1AE243273D50062E5B4 /* FeedImageCell.swift */,
 				FC313E0A243BE60900E7DFF6 /* UIView+Shimmering.swift */,
+				FCEFDDBB2461E1940066E68A /* Feed.storyboard */,
+				FCEFDDBD2461E1D00066E68A /* Feed.xcassets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -738,6 +744,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCEFDDBC2461E1950066E68A /* Feed.storyboard in Resources */,
+				FCEFDDBE2461E1D00066E68A /* Feed.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
