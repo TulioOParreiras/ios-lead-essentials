@@ -75,6 +75,9 @@
                                                             <state key="normal" title="↻">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="retryButtonTapped" destination="uZf-uL-HYV" eventType="touchUpInside" id="hw0-Nh-ac0"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -119,6 +122,7 @@
                                 <connections>
                                     <outlet property="descriptionLabel" destination="Kaw-f9-BUb" id="Uy6-yL-Nm1"/>
                                     <outlet property="feedImageContainer" destination="Rfh-ls-OO1" id="t71-cf-w73"/>
+                                    <outlet property="feedImageRetryButton" destination="F44-mG-pDx" id="zoT-Am-KMe"/>
                                     <outlet property="feedImageView" destination="6hE-vP-r17" id="x0q-3E-bDA"/>
                                     <outlet property="locationContainer" destination="Sdf-lg-7tP" id="n5y-Sc-1y0"/>
                                     <outlet property="locationLabel" destination="3jP-Kf-h7h" id="7SZ-8E-2EP"/>
