@@ -128,6 +128,7 @@
                         <connections>
                             <outlet property="dataSource" destination="VQE-q1-OD3" id="EGN-Gt-FhA"/>
                             <outlet property="delegate" destination="VQE-q1-OD3" id="6vZ-sb-N4A"/>
+                            <outlet property="prefetchDataSource" destination="VQE-q1-OD3" id="TCY-CR-Sm4"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Feed" id="KEE-mg-sur"/>
