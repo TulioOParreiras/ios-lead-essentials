@@ -272,6 +272,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC04BFBB2462FF5E00E722B5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FC313E0A243BE60900E7DFF6 /* UIView+Shimmering.swift */,
+				FCEFDDBF2461ECFA0066E68A /* UITableView+Dequeueing.swift */,
+				FCEFDDC12461EDB10066E68A /* UIImageView+Animations.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		FC0B7CE32461F8C900684FD7 /* Feed UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,12 +480,10 @@
 		FC9AE97624509DFE008A3C9B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FC04BFBB2462FF5E00E722B5 /* Helpers */,
 				FCCEE1AE243273D50062E5B4 /* FeedImageCell.swift */,
-				FC313E0A243BE60900E7DFF6 /* UIView+Shimmering.swift */,
 				FCEFDDBB2461E1940066E68A /* Feed.storyboard */,
 				FCEFDDBD2461E1D00066E68A /* Feed.xcassets */,
-				FCEFDDBF2461ECFA0066E68A /* UITableView+Dequeueing.swift */,
-				FCEFDDC12461EDB10066E68A /* UIImageView+Animations.swift */,
 				FC04BFB92462FE3500E722B5 /* ErrorView.swift */,
 			);
 			path = Views;
