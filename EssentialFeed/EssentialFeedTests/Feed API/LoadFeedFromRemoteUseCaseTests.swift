@@ -70,7 +70,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     
     func test_load_deliversNoItemsOn200HTTPResponseWithEmptyJSONList() {
         let (sut, client) = makeSUT()
-
+        
         expect(sut, toCompleteWith: .success([]), when: {
             let emptyListJSON = makeItemsJSON([])
             client.complete(withStatusCode: 200, data: emptyListJSON)
@@ -105,7 +105,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         
         var capturedResults = [RemoteFeedLoader.Result]()
         sut?.load { capturedResults.append($0) }
-
+        
         sut = nil
         client.complete(withStatusCode: 200, data: makeItemsJSON([]))
         
@@ -125,7 +125,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     private func failure(_ error: RemoteFeedLoader.Error) -> RemoteFeedLoader.Result {
         return .failure(error)
     }
-        
+    
     private func makeItem(id: UUID, description: String? = nil, location: String? = nil, imageURL: URL) -> (model: FeedImage, json: [String: Any]) {
         let item = FeedImage(id: id, description: description, location: location, url: imageURL)
         
@@ -134,7 +134,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
             "description": description,
             "location": location,
             "image": imageURL.absoluteString
-        ].compactMapValues { $0 }
+            ].compactMapValues { $0 }
         
         return (item, json)
     }
@@ -166,16 +166,21 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
         
         wait(for: [exp], timeout: 1.0)
     }
-
+    
     private class HTTPClientSpy: HTTPClient {
+        private struct Task: HTTPClientTask {
+            func cancel() {}
+        }
+        
         private var messages = [(url: URL, completion: (HTTPClient.Result) -> Void)]()
         
         var requestedURLs: [URL] {
             return messages.map { $0.url }
         }
         
-        func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) {
+        func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
             messages.append((url, completion))
+            return Task()
         }
         
         func complete(with error: Error, at index: Int = 0) {
@@ -188,9 +193,9 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
                 statusCode: code,
                 httpVersion: nil,
                 headerFields: nil
-            )!
+                )!
             messages[index].completion(.success((data, response)))
         }
     }
-
+    
 }
