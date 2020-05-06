@@ -70,6 +70,7 @@
 		FCA820EE23EB16D9000441BC /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA820ED23EB16D9000441BC /* HTTPClient.swift */; };
 		FCA820F023EB172B000441BC /* FeedItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA820EF23EB172B000441BC /* FeedItemMapper.swift */; };
 		FCACF55324633BB30023F3B1 /* FeedPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF55224633BB30023F3B1 /* FeedPresenterTest.swift */; };
+		FCACF556246344860023F3B1 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCACF558246344860023F3B1 /* Feed.strings */; };
 		FCAF7F562450ECC200440864 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF7F552450ECC200440864 /* FeedPresenter.swift */; };
 		FCB2ECED242D572E00496FFF /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDBF43F23EDAA9A005117E6 /* XCTestCase+MemoryLeakTracking.swift */; };
 		FCB2ECEF242D7B5100496FFF /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2ECEE242D7B5100496FFF /* FeedViewController.swift */; };
@@ -206,6 +207,9 @@
 		FCA820ED23EB16D9000441BC /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		FCA820EF23EB172B000441BC /* FeedItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemMapper.swift; sourceTree = "<group>"; };
 		FCACF55224633BB30023F3B1 /* FeedPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTest.swift; sourceTree = "<group>"; };
+		FCACF557246344860023F3B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
+		FCACF559246344870023F3B1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
+		FCACF55A246344880023F3B1 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 		FCAF7F552450ECC200440864 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		FCB2ECEE242D7B5100496FFF /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		FCCEE1AE243273D50062E5B4 /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
@@ -528,6 +532,7 @@
 			isa = PBXGroup;
 			children = (
 				FCACF55224633BB30023F3B1 /* FeedPresenterTest.swift */,
+				FCACF558246344860023F3B1 /* Feed.strings */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -798,6 +803,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCACF556246344860023F3B1 /* Feed.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -985,6 +991,16 @@
 				FC0B7CE52461F9A800684FD7 /* en */,
 				FC0B7CE72461F9E600684FD7 /* pt-BR */,
 				FC0B7CE82461FA1300684FD7 /* el */,
+			);
+			name = Feed.strings;
+			sourceTree = "<group>";
+		};
+		FCACF558246344860023F3B1 /* Feed.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCACF557246344860023F3B1 /* en */,
+				FCACF559246344870023F3B1 /* pt-BR */,
+				FCACF55A246344880023F3B1 /* el */,
 			);
 			name = Feed.strings;
 			sourceTree = "<group>";
