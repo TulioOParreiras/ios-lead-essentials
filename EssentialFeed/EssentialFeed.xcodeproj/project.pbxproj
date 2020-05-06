@@ -69,6 +69,7 @@
 		FCA58C6D2416849B00DBD5A3 /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA58C6C2416849B00DBD5A3 /* FeedCachePolicy.swift */; };
 		FCA820EE23EB16D9000441BC /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA820ED23EB16D9000441BC /* HTTPClient.swift */; };
 		FCA820F023EB172B000441BC /* FeedItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA820EF23EB172B000441BC /* FeedItemMapper.swift */; };
+		FCACF55324633BB30023F3B1 /* FeedPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCACF55224633BB30023F3B1 /* FeedPresenterTest.swift */; };
 		FCAF7F562450ECC200440864 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF7F552450ECC200440864 /* FeedPresenter.swift */; };
 		FCB2ECED242D572E00496FFF /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDBF43F23EDAA9A005117E6 /* XCTestCase+MemoryLeakTracking.swift */; };
 		FCB2ECEF242D7B5100496FFF /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB2ECEE242D7B5100496FFF /* FeedViewController.swift */; };
@@ -204,6 +205,7 @@
 		FCA58C6C2416849B00DBD5A3 /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
 		FCA820ED23EB16D9000441BC /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		FCA820EF23EB172B000441BC /* FeedItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemMapper.swift; sourceTree = "<group>"; };
+		FCACF55224633BB30023F3B1 /* FeedPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTest.swift; sourceTree = "<group>"; };
 		FCAF7F552450ECC200440864 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		FCB2ECEE242D7B5100496FFF /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		FCCEE1AE243273D50062E5B4 /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
@@ -377,9 +379,9 @@
 				FC59B4C023E75E8800D8790A /* EssentialFeed */,
 				FCDEBF9023F1AB32009D88B1 /* EssentialFeedAPIEndToEndTests */,
 				FC9AD4CD242167F2008AA06D /* EssentialFeedCacheIntegrationTests */,
+				FC59B4CB23E75E8800D8790A /* EssentialFeedTests */,
 				FCE69A5624259410004A6AB5 /* EssentialFeediOS */,
 				FCE69A6124259410004A6AB5 /* EssentialFeediOSTests */,
-				FC59B4CB23E75E8800D8790A /* EssentialFeedTests */,
 				FC9272C3242C10B8008F0C4B /* Frameworks */,
 				FC59B4BF23E75E8800D8790A /* Products */,
 			);
@@ -416,6 +418,7 @@
 				FCDBF43E23EDAA80005117E6 /* Helper */,
 				FC55143423F7267D003CC79C /* Feed Cache */,
 				FCA820F123EB1B93000441BC /* Feed API */,
+				FCACF55124633B990023F3B1 /* Feed Presentation */,
 			);
 			path = EssentialFeedTests;
 			sourceTree = "<group>";
@@ -519,6 +522,14 @@
 				FCDBF43C23ED8479005117E6 /* URLSessionHTTPClientTests.swift */,
 			);
 			path = "Feed API";
+			sourceTree = "<group>";
+		};
+		FCACF55124633B990023F3B1 /* Feed Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FCACF55224633BB30023F3B1 /* FeedPresenterTest.swift */,
+			);
+			path = "Feed Presentation";
 			sourceTree = "<group>";
 		};
 		FCAF7F542450EC5800440864 /* Feed Presentation */ = {
@@ -865,6 +876,7 @@
 				FC0A4BD2241844B800D2838E /* FeedStoreSpecs.swift in Sources */,
 				FCDBF44023EDAA9A005117E6 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 				FC41A31B241BC2A80032B7EC /* CoreDataFeedStoreTests.swift in Sources */,
+				FCACF55324633BB30023F3B1 /* FeedPresenterTest.swift in Sources */,
 				FC0A4BD42418451E00D2838E /* XCTestCase+FeedStoreSpecs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
