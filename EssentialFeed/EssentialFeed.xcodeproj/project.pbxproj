@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC04BFBA2462FE3500E722B5 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC04BFB92462FE3500E722B5 /* ErrorView.swift */; };
 		FC0A4BD2241844B800D2838E /* FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A4BD1241844B800D2838E /* FeedStoreSpecs.swift */; };
 		FC0A4BD42418451E00D2838E /* XCTestCase+FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A4BD32418451E00D2838E /* XCTestCase+FeedStoreSpecs.swift */; };
 		FC0B7CE22461F82B00684FD7 /* FeedViewControllerTests+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0B7CE12461F82B00684FD7 /* FeedViewControllerTests+Localization.swift */; };
@@ -138,6 +139,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC04BFB92462FE3500E722B5 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		FC0A4BD1241844B800D2838E /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
 		FC0A4BD32418451E00D2838E /* XCTestCase+FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		FC0B7CE12461F82B00684FD7 /* FeedViewControllerTests+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Localization.swift"; sourceTree = "<group>"; };
@@ -474,6 +476,7 @@
 				FCEFDDBD2461E1D00066E68A /* Feed.xcassets */,
 				FCEFDDBF2461ECFA0066E68A /* UITableView+Dequeueing.swift */,
 				FCEFDDC12461EDB10066E68A /* UIImageView+Animations.swift */,
+				FC04BFB92462FE3500E722B5 /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -878,6 +881,7 @@
 			files = (
 				FCAF7F562450ECC200440864 /* FeedPresenter.swift in Sources */,
 				FC9AE9822450A071008A3C9B /* FeedImageDataLoader.swift in Sources */,
+				FC04BFBA2462FE3500E722B5 /* ErrorView.swift in Sources */,
 				FC313E0B243BE60900E7DFF6 /* UIView+Shimmering.swift in Sources */,
 				FCEFDDC02461ECFA0066E68A /* UITableView+Dequeueing.swift in Sources */,
 				FC6C453B245DE7C800702A62 /* FeedImageViewModel.swift in Sources */,
