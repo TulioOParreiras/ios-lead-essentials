@@ -1,6 +1,6 @@
 # Essential Feed App – Image Feed Feature
 
-[![Build Status](https://travis-ci.com/TulioOParreiras/ios-lead-essentials.svg?token=iGMpTFuqiw9THqt1PGeK&branch=master)](https://travis-ci.com/TulioOParreiras/ios-lead-essentials)
+[![Build Status](https://travis-ci.com/essentialdevelopercom/essential-feed-case-study.svg?branch=master)](https://travis-ci.com/essentialdevelopercom/essential-feed-case-study)
 
 ## BDD Specs
 
@@ -34,26 +34,25 @@ So I can always enjoy images of my friends
 #### Scenarios (Acceptance criteria)
 
 ```
- Given the customer doesn't have connectivity
-   And there’s a cached version of the feed
-   And the cache is less than seven days old
-  When the customer requests to see the feed
-  Then the app should display the latest feed saved
+Given the customer doesn't have connectivity
+  And there’s a cached version of the feed
+  And the cache is less than seven days old
+ When the customer requests to see the feed
+ Then the app should display the latest feed saved
 
- Given the customer doesn't have connectivity
-   And there’s a cached version of the feed
-   And the cache is seven days old or more
-  When the customer requests to see the feed
-  Then the app should display an error message
+Given the customer doesn't have connectivity
+  And there’s a cached version of the feed
+  And the cache is seven days old or more
+ When the customer requests to see the feed
+ Then the app should display an error message
 
- Given the customer doesn't have connectivity
-   And the cache is empty
-  When the customer requests to see the feed
-  Then the app should display an error message
+Given the customer doesn't have connectivity
+  And the cache is empty
+ When the customer requests to see the feed
+ Then the app should display an error message
 ```
 
 ## Use Cases
-
 
 ### Load Feed From Remote Use Case
 
@@ -68,10 +67,12 @@ So I can always enjoy images of my friends
 5. System delivers image feed.
 
 #### Invalid data – error course (sad path):
-1. System delivers an invalid data error.
+1. System delivers invalid data error.
 
 #### No connectivity – error course (sad path):
 1. System delivers connectivity error.
+
+---
 
 ### Load Feed Image Data From Remote Use Case
 
@@ -93,6 +94,8 @@ So I can always enjoy images of my friends
 #### No connectivity – error course (sad path):
 1. System delivers connectivity error.
 
+---
+
 ### Load Feed From Cache Use Case
 
 #### Primary course:
@@ -111,6 +114,8 @@ So I can always enjoy images of my friends
 #### Empty cache course (sad path): 
 1. System delivers no feed images.
 
+---
+
 ### Load Feed Image Data From Cache Use Case
 
 #### Data:
@@ -128,8 +133,9 @@ So I can always enjoy images of my friends
 1. System delivers error.
 
 #### Empty cache course (sad path):
-1. System delivers no image data.
+1. System delivers not found error.
 
+---
 
 ### Validate Feed Cache Use Case
 
@@ -144,9 +150,7 @@ So I can always enjoy images of my friends
 #### Expired cache course (sad path): 
 1. System deletes cache.
 
-#### Empty cache course (sad path): 
-1. System delivers no feed images.
-
+---
 
 ### Cache Feed Use Case
 
@@ -158,7 +162,7 @@ So I can always enjoy images of my friends
 2. System deletes old cache data.
 3. System encodes image feed.
 4. System timestamps the new cache.
-5. System saves new data.
+5. System saves new cache data.
 6. System delivers success message.
 
 #### Deleting error course (sad path):
@@ -167,6 +171,7 @@ So I can always enjoy images of my friends
 #### Saving error course (sad path):
 1. System delivers error.
 
+---
 
 ## Flowchart
 
@@ -177,17 +182,23 @@ So I can always enjoy images of my friends
 ![Feed Loading Feature](feed_architecture.png)
 
 ## Model Specs
+
 ### Feed Image
+
 | Property      | Type                |
 |---------------|---------------------|
 | `id`          | `UUID`              |
 | `description` | `String` (optional) |
 | `location`    | `String` (optional) |
-| `url`    		| `URL`               |
+| `url`	        | `URL`               |
+
 ### Payload contract
+
 ```
 GET *url* (TBD)
+
 200 RESPONSE
+
 {
 	"items": [
 		{
