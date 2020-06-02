@@ -4,8 +4,8 @@
 
 import Foundation
 
-public protocol FeedCache {
+public protocol FeedImageDataCache {
 	typealias Result = Swift.Result<Void, Error>
 
-	func save(_ feed: [FeedImage], completion: @escaping (Result) -> Void)
+	func save(_ data: Data, for url: URL, completion: @escaping (Result) -> Void)
 }

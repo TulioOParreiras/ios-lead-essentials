@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1130"
+   LastUpgradeVersion = "1120"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -16,7 +16,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FC1E13382485C35D00DFF574"
+               BlueprintIdentifier = "08B52E7A237AF87F0092D15B"
                BuildableName = "EssentialAppUIAcceptanceTests.xctest"
                BlueprintName = "EssentialAppUIAcceptanceTests"
                ReferencedContainer = "container:EssentialApp.xcodeproj">

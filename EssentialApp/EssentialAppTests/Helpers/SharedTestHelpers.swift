@@ -18,5 +18,5 @@ func anyData() -> Data {
 }
 
 func uniqueFeed() -> [FeedImage] {
-    return [FeedImage(id: UUID(), description: "any", location: "any", url: anyURL())]
+	return [FeedImage(id: UUID(), description: "any", location: "any", url: anyURL())]
 }
