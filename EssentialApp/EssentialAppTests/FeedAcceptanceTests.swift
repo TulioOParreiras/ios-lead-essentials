@@ -46,8 +46,6 @@ class FeedAcceptanceTests: XCTestCase {
         httpClient: HTTPClientStub = .offline,
         store: InMemoryFeedStore = .empty
     ) -> FeedViewController {
-        let store = InMemoryFeedStore.empty
-        let httpClient = HTTPClientStub.online(response)
         let sut = SceneDelegate(httpClient: httpClient, store: store)
         sut.window = UIWindow()
         sut.configureWindow()
