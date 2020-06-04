@@ -48,7 +48,6 @@
 		FC297CBC248880B90071ADB0 /* FeedUIIntegrationTests+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC297CB3248880B90071ADB0 /* FeedUIIntegrationTests+Localization.swift */; };
 		FC297CBE248880E80071ADB0 /* FeedUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC297CBD248880E80071ADB0 /* FeedUIIntegrationTests.swift */; };
 		FC297CC0248883120071ADB0 /* FeedAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC297CBF248883120071ADB0 /* FeedAcceptanceTests.swift */; };
-		FCD47E112485D512005700CA /* DebuggingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD47E102485D512005700CA /* DebuggingSceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,7 +119,6 @@
 		FC297CB3248880B90071ADB0 /* FeedUIIntegrationTests+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedUIIntegrationTests+Localization.swift"; sourceTree = "<group>"; };
 		FC297CBD248880E80071ADB0 /* FeedUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTests.swift; sourceTree = "<group>"; };
 		FC297CBF248883120071ADB0 /* FeedAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAcceptanceTests.swift; sourceTree = "<group>"; };
-		FCD47E102485D512005700CA /* DebuggingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingSceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,7 +193,6 @@
 				FC297CA1248880A40071ADB0 /* FeedViewAdapter.swift */,
 				0895DA86234B3B950031BB2D /* AppDelegate.swift */,
 				0895DA88234B3B950031BB2D /* SceneDelegate.swift */,
-				FCD47E102485D512005700CA /* DebuggingSceneDelegate.swift */,
 				085BB637235A279C0013B282 /* FeedLoaderWithFallbackComposite.swift */,
 				08F8822E23649A6D00CAEE16 /* FeedLoaderCacheDecorator.swift */,
 				082C00002359E3B2008927D3 /* FeedImageDataLoaderWithFallbackComposite.swift */,
@@ -346,7 +343,6 @@
 				FC297CA7248880A40071ADB0 /* MainQueueDispatchDecorator.swift in Sources */,
 				FC297CA6248880A40071ADB0 /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
 				FC297CAA248880A40071ADB0 /* FeedLoaderPresentationAdapter.swift in Sources */,
-				FCD47E112485D512005700CA /* DebuggingSceneDelegate.swift in Sources */,
 				FC297CA9248880A40071ADB0 /* WeakRefVirtualProxy.swift in Sources */,
 				0895DA89234B3B950031BB2D /* SceneDelegate.swift in Sources */,
 			);
