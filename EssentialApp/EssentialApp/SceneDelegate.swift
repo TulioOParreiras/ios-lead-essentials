@@ -31,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		let localFeedLoader = LocalFeedLoader(store: localStore, currentDate: Date.init)
 		let localImageLoader = LocalFeedImageDataLoader(store: localStore)
 		
-        window?.rootViewController = UINavigationController((rootViewController:
+        window?.rootViewController = UINavigationController(rootViewController:
             FeedUIComposer.feedComposedWith(
             feedLoader: FeedLoaderWithFallbackComposite(
                 primary: FeedLoaderCacheDecorator(
@@ -42,7 +42,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 primary: localImageLoader,
                 fallback: FeedImageDataLoaderCacheDecorator(
                     decoratee: remoteImageLoader,
-                    cache: localImageLoader)))))
+                    cache: localImageLoader))))
 	}
 	
     func makeRemoteClient() -> HTTPClient {
