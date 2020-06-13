@@ -50,6 +50,7 @@
 		FC297CC0248883120071ADB0 /* FeedAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC297CBF248883120071ADB0 /* FeedAcceptanceTests.swift */; };
 		FC297CC224888FB40071ADB0 /* HTTPClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC297CC124888FB40071ADB0 /* HTTPClientStub.swift */; };
 		FC297CC424888FF20071ADB0 /* InMemoryFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC297CC324888FF20071ADB0 /* InMemoryFeedStore.swift */; };
+		FCCC32FD2495387E000176DC /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCC32FC2495387D000176DC /* UIView+TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		FC297CBF248883120071ADB0 /* FeedAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAcceptanceTests.swift; sourceTree = "<group>"; };
 		FC297CC124888FB40071ADB0 /* HTTPClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientStub.swift; sourceTree = "<group>"; };
 		FC297CC324888FF20071ADB0 /* InMemoryFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryFeedStore.swift; sourceTree = "<group>"; };
+		FCCC32FC2495387D000176DC /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				080486292363416F0087ED48 /* FeedImageDataLoaderSpy.swift */,
 				FC297CC124888FB40071ADB0 /* HTTPClientStub.swift */,
 				FC297CC324888FF20071ADB0 /* InMemoryFeedStore.swift */,
+				FCCC32FC2495387D000176DC /* UIView+TestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				FC297CB6248880B90071ADB0 /* UIRefreshControl+TestHelpers.swift in Sources */,
 				FC297CC224888FB40071ADB0 /* HTTPClientStub.swift in Sources */,
 				FC297CBA248880B90071ADB0 /* FeedImageCell+TestHelpers.swift in Sources */,
+				FCCC32FD2495387E000176DC /* UIView+TestHelpers.swift in Sources */,
 				08F882292364918600CAEE16 /* FeedLoaderStub.swift in Sources */,
 				FC297CB7248880B90071ADB0 /* FeedViewController+TestHelpers.swift in Sources */,
 				FC297CC0248883120071ADB0 /* FeedAcceptanceTests.swift in Sources */,
