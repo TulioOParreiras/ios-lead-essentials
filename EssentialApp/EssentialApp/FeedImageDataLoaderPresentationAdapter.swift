@@ -34,5 +34,6 @@ final class FeedImageDataLoaderPresentationAdapter<View: FeedImageView, Image>: 
 	
 	func didCancelImageRequest() {
 		task?.cancel()
+        task = nil
 	}
 }
