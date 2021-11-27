@@ -46,10 +46,10 @@ class FeedItemsMapperTests: XCTestCase {
         
         let json = makeItemsJSON([item1.json, item2.json])
         let result = try FeedItemsMapper.map(json, from: HTTPURLResponse(statusCode: 200))
-		XCTAssertEqual(items, result)
-	}
-	
-	// MARK: - Helpers
+        XCTAssertEqual(items, result)
+    }
+    
+    // MARK: - Helpers
 		
 	private func makeItem(id: UUID, description: String? = nil, location: String? = nil, imageURL: URL) -> (model: FeedImage, json: [String: Any]) {
 		let item = FeedImage(id: id, description: description, location: location, url: imageURL)
@@ -65,4 +65,3 @@ class FeedItemsMapperTests: XCTestCase {
 	}
 
 }
-
