@@ -21,11 +21,11 @@ public final class FeedPresenter {
 	private let loadingView: FeedLoadingView
 	private let errorView: FeedErrorView
 	
-	private var feedLoadError: String {
+	private var loadError: String {
 		return NSLocalizedString("GENERIC_CONNECTION_ERROR",
-				tableName: "Feed",
-				bundle: Bundle(for: FeedPresenter.self),
-				comment: "Error message displayed when we can't load the image feed from the server")
+				tableName: "Shared",
+				bundle: Bundle(for: Self.self),
+				comment: "Error message displayed when we can't load the resource from the server")
 	}
 	
 	public init(feedView: FeedView, loadingView: FeedLoadingView, errorView: FeedErrorView) {
@@ -52,7 +52,7 @@ public final class FeedPresenter {
 	}
 	
 	public func didFinishLoadingFeed(with error: Error) {
-		errorView.display(.error(message: feedLoadError))
+		errorView.display(.error(message: loadError))
 		loadingView.display(FeedLoadingViewModel(isLoading: false))
 	}
 }
