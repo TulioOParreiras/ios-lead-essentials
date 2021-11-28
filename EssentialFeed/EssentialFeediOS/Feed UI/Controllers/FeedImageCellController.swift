@@ -29,21 +29,22 @@ final public class FeedImageCellController: FeedImageView, ResourceView, Resourc
         cell?.descriptionLabel.text = viewModel.description
         cell?.accessibilityIdentifier = "feed-image-cell"
         cell?.feedImageView.accessibilityIdentifier = "feed-image-view"
-		delegate.didRequestImage()
-		return cell!
-	}
-	
-	func preload() {
-		delegate.didRequestImage()
-	}
-	
-	func cancelLoad() {
-		releaseCellForReuse()
-		delegate.didCancelImageRequest()
-	}
-	
+        cell?.onRetry = delegate.didRequestImage
+        delegate.didRequestImage()
+        return cell!
+    }
+    
+    func preload() {
+        delegate.didRequestImage()
+    }
+    
+    func cancelLoad() {
+        releaseCellForReuse()
+        delegate.didCancelImageRequest()
+    }
+    
     public func display(_ viewModel: FeedImageViewModel<UIImage>) {
-	}
+    }
     
     public func display(_ viewModel: UIImage) {
         cell?.feedImageView.setImageAnimated(viewModel)
@@ -55,7 +56,6 @@ final public class FeedImageCellController: FeedImageView, ResourceView, Resourc
     
     public func display(_ viewModel: ResourceErrorViewModel) {
         cell?.feedImageRetryButton.isHidden = viewModel.message == nil
-        cell?.onRetry = delegate.didRequestImage
     }
 	
 	private func releaseCellForReuse() {
