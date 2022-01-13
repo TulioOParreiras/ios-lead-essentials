@@ -11,15 +11,6 @@ import EssentialFeediOS
 @testable import EssentialFeed
 
 class FeedSnapshotTests: XCTestCase {
-
-    func test_emptyFeed() {
-        let sut = makeSUT()
-        
-        sut.display(emptyFeed())
-        
-        assert(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "EMPTY_FEED_light")
-        assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark)), named: "EMPTY_FEED_dark")
-    }
     
     func test_feedWithContent() {
         let sut = makeSUT()
@@ -28,15 +19,6 @@ class FeedSnapshotTests: XCTestCase {
         
         assert(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "FEED_WITH_CONTENT_light")
         assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark)), named: "FEED_WITH_CONTENT_dark")
-    }
-    
-    func test_feedWithErrorMessage() {
-        let sut = makeSUT()
-        
-        sut.display(.error(message: "This is a\nmulti-line\nerror message"))
-        
-        assert(snapshot: sut.snapshot(for: .iPhone8(style: .light)), named: "FEED_WITH_ERROR_MESSAGE_light")
-        assert(snapshot: sut.snapshot(for: .iPhone8(style: .dark)), named: "FEED_WITH_ERROR_MESSAGE_dark")
     }
     
     func test_feedWithFailedImageLoading() {
@@ -64,7 +46,10 @@ class FeedSnapshotTests: XCTestCase {
         return []
     }
     
-    private func feedWithContent() -> [ImageStub] {
+}
+ 
+extension XCTestCase {
+    func feedWithContent() -> [ImageStub] {
         return [
             ImageStub(description: "The East Side Gallery is an open-air gallery in Berlin. It consists of a series of murals painted directly on a 1,316 m long remnant of the Berlin Wall, located near the centre of Berlin, on Mühlenstraße in Friedrichshain-Kreuzberg. The gallery has official status as a Denkmal, or heritage-protected landmark.",
                       location: "East Side Gallery\nMemorial in Berlin, Germany",
@@ -75,7 +60,7 @@ class FeedSnapshotTests: XCTestCase {
         ]
     }
     
-    private func feedWithFailedImageLoading() -> [ImageStub] {
+    func feedWithFailedImageLoading() -> [ImageStub] {
         return [
             ImageStub(
                 description: nil,
@@ -88,7 +73,7 @@ class FeedSnapshotTests: XCTestCase {
         ]
     }
     
-    private func assert(snapshot: UIImage, named name: String, file: StaticString = #file, line: UInt = #line) {
+    func assert(snapshot: UIImage, named name: String, file: StaticString = #file, line: UInt = #line) {
         let snapshotURL = makeSnapshotURL(named: name, file: file)
         let snapshotData = makeSnapshotData(for: snapshot, file: file, line: line)
         
@@ -107,7 +92,7 @@ class FeedSnapshotTests: XCTestCase {
         }
     }
     
-    private func record(snapshot: UIImage, named name: String, file: StaticString = #file, line: UInt = #line) {
+    func record(snapshot: UIImage, named name: String, file: StaticString = #file, line: UInt = #line) {
         let snapshotURL = makeSnapshotURL(named: name, file: file)
         let snapshotData = makeSnapshotData(for: snapshot, file: file, line: line)
         
@@ -122,14 +107,14 @@ class FeedSnapshotTests: XCTestCase {
         }
     }
     
-    private func makeSnapshotURL(named name: String, file: StaticString) -> URL {
+    func makeSnapshotURL(named name: String, file: StaticString) -> URL {
         return URL(fileURLWithPath: String(describing: file))
             .deletingLastPathComponent()
             .appendingPathComponent("snapshot")
             .appendingPathComponent("\(name).png")
     }
     
-    private func makeSnapshotData(for snapshot: UIImage, file: StaticString, line: UInt) -> Data? {
+    func makeSnapshotData(for snapshot: UIImage, file: StaticString, line: UInt) -> Data? {
         guard let data = snapshot.pngData() else {
             XCTFail("Failed to generate PNG data representation from snapshot", file: file, line: line)
             return nil
@@ -140,19 +125,19 @@ class FeedSnapshotTests: XCTestCase {
 
 }
 
-extension UIViewController {
+public extension UIViewController {
     func snapshot(for configuration: SnapshotConfiguration) -> UIImage {
         return SnapshotWindow(configuration: configuration, root: self).snapshot()
     }
 }
 
-struct SnapshotConfiguration {
-    let size: CGSize
-    let safeAreaInsets: UIEdgeInsets
-    let layoutMargins: UIEdgeInsets
-    let traitCollection: UITraitCollection
+public struct SnapshotConfiguration {
+    public let size: CGSize
+    public let safeAreaInsets: UIEdgeInsets
+    public let layoutMargins: UIEdgeInsets
+    public let traitCollection: UITraitCollection
     
-    static func iPhone8(style: UIUserInterfaceStyle) -> SnapshotConfiguration {
+    public static func iPhone8(style: UIUserInterfaceStyle) -> SnapshotConfiguration {
         return SnapshotConfiguration(
             size: CGSize(width: 375, height: 667),
             safeAreaInsets: UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0),
@@ -171,7 +156,7 @@ struct SnapshotConfiguration {
     }
 }
 
-private final class SnapshotWindow: UIWindow {
+final class SnapshotWindow: UIWindow {
     private var configuration: SnapshotConfiguration = .iPhone8(style: .light)
     
     convenience init(configuration: SnapshotConfiguration, root: UIViewController) {
@@ -199,7 +184,7 @@ private final class SnapshotWindow: UIWindow {
     }
 }
 
-private extension ListViewController {
+extension ListViewController {
     func display(_ stubs: [ImageStub]) {
         let cells: [FeedImageCellController] = stubs.map { stub in
             let cellController = FeedImageCellController(viewModel: stub.viewModel, delegate: stub)
@@ -211,7 +196,7 @@ private extension ListViewController {
     }
 }
 
-private class ImageStub: FeedImageCellControllerDelegate {
+class ImageStub: FeedImageCellControllerDelegate {
     let viewModel: FeedImageViewModel
     let image: UIImage?
     weak var controller: FeedImageCellController?
