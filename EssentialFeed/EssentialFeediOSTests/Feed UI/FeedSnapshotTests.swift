@@ -46,9 +46,6 @@ class FeedSnapshotTests: XCTestCase {
         return []
     }
     
-}
- 
-extension XCTestCase {
     func feedWithContent() -> [ImageStub] {
         return [
             ImageStub(description: "The East Side Gallery is an open-air gallery in Berlin. It consists of a series of murals painted directly on a 1,316 m long remnant of the Berlin Wall, located near the centre of Berlin, on Mühlenstraße in Friedrichshain-Kreuzberg. The gallery has official status as a Denkmal, or heritage-protected landmark.",
@@ -72,6 +69,10 @@ extension XCTestCase {
                 image: nil)
         ]
     }
+    
+}
+ 
+extension XCTestCase {
     
     func assert(snapshot: UIImage, named name: String, file: StaticString = #file, line: UInt = #line) {
         let snapshotURL = makeSnapshotURL(named: name, file: file)
@@ -102,6 +103,7 @@ extension XCTestCase {
                 withIntermediateDirectories: true)
             
             try snapshotData?.write(to: snapshotURL)
+            XCTFail("Record succeeded - use `assert` to compare the snapshot from now on.", file: file, line: line)
         } catch {
             XCTFail("Failed to record snapshot with error: \(error)", file: file, line: line)
         }
