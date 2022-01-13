@@ -554,9 +554,10 @@
 		08D917AC22B92A5D003BC31B /* EssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				08D917AF22B92A5D003BC31B /* Info.plist */,
 				FCCC32F62494131F000176DC /* Helpers */,
-				FCCC32F424940EAE000176DC /* FeedSnapshotTests.swift */,
+				4752EF642790A2EF00BA7112 /* Shared UI */,
+				4752EF652790A2F200BA7112 /* Feed UI */,
+				08D917AF22B92A5D003BC31B /* Info.plist */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -641,6 +642,29 @@
 				FCCC32F92494147A000176DC /* UITableView+HeaderSizing.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4752EF642790A2EF00BA7112 /* Shared UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Shared UI";
+			sourceTree = "<group>";
+		};
+		4752EF652790A2F200BA7112 /* Feed UI */ = {
+			isa = PBXGroup;
+			children = (
+				4752EF662790A30A00BA7112 /* snapshots */,
+				FCCC32F424940EAE000176DC /* FeedSnapshotTests.swift */,
+			);
+			path = "Feed UI";
+			sourceTree = "<group>";
+		};
+		4752EF662790A30A00BA7112 /* snapshots */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = snapshots;
 			sourceTree = "<group>";
 		};
 		476CAA7D2753B0F900521D66 /* Shared Presentation */ = {
