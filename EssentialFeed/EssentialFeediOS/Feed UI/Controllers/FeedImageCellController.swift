@@ -37,7 +37,9 @@ extension FeedImageCellController: UITableViewDataSource, UITableViewDelegate, U
         cell?.descriptionLabel.text = viewModel.description
         cell?.accessibilityIdentifier = "feed-image-cell"
         cell?.feedImageView.accessibilityIdentifier = "feed-image-view"
-        cell?.onRetry = delegate.didRequestImage
+        cell?.onRetry = { [weak self] in
+            self?.delegate.didRequestImage()
+        }
         delegate.didRequestImage()
         return cell!
     }
